@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 ff387878c8a072d3a0a6c3343f77183c515d0bd6 ryanfavour4 <ryanfave022@gmail.com> 1740708021 +0100	commit (initial): Initial commit from Create Next App
+ff387878c8a072d3a0a6c3343f77183c515d0bd6 0000000000000000000000000000000000000000 ryanfavour4 <ryanfave022@gmail.com> 1740708998 +0100	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 ff387878c8a072d3a0a6c3343f77183c515d0bd6 ryanfavour4 <ryanfave022@gmail.com> 1740708998 +0100	Branch: renamed refs/heads/master to refs/heads/main
+ff387878c8a072d3a0a6c3343f77183c515d0bd6 7a6e4f8ec93cfc8fb137553bca90d533fc989c25 ryanfavour4 <ryanfave022@gmail.com> 1740867446 +0100	commit: Add theme context, update layout, and configure ESLint and Prettier
+7a6e4f8ec93cfc8fb137553bca90d533fc989c25 52fccf852a7438f5aee6f578044cb879de205df1 ryanfavour4 <ryanfave022@gmail.com> 1740872861 +0100	commit: Enhance job search interface with location and search input fields, and update styles
+52fccf852a7438f5aee6f578044cb879de205df1 f8dc2c504892d95bf0bf69a1918c67cdfbd0fd60 ryanfavour4 <ryanfave022@gmail.com> 1740958037 +0100	commit: Add Checkbox and Select components with custom hooks for state management
+f8dc2c504892d95bf0bf69a1918c67cdfbd0fd60 d1164fad9f5f1eec66777df0fac39c11bd769e4c ryanfavour4 <ryanfave022@gmail.com> 1740990356 +0100	commit: Remove unnecessary whitespace in JobCard component
+d1164fad9f5f1eec66777df0fac39c11bd769e4c b437c25d1cf0a8b645e396c0ca83539e74c6afd9 ryanfavour4 <ryanfave022@gmail.com> 1741045023 +0100	commit: Add job filtering options with checkboxes for categories and types
+b437c25d1cf0a8b645e396c0ca83539e74c6afd9 a066072f1f40418d4fdc00e58a67c49f9663dc6b ryanfavour4 <ryanfave022@gmail.com> 1741045622 +0100	commit: Fix layout issues in Home component for better responsiveness
+a066072f1f40418d4fdc00e58a67c49f9663dc6b fab076bf230de2b029d73e6a1f102425c1347975 ryanfavour4 <ryanfave022@gmail.com> 1741360160 +0100	commit: Refactor job category and type handling to use constants and improve checkbox functionality
+fab076bf230de2b029d73e6a1f102425c1347975 b6f9fa85bfc0088b4e3126bf1b3aae0e603b17ee ryanfavour4 <ryanfave022@gmail.com> 1741361108 +0100	commit: Add sharing functionality and related jobs section to JobDetails component
+b6f9fa85bfc0088b4e3126bf1b3aae0e603b17ee 1fea444662625a13859f00ec456b693e48be8ce3 ryanfavour4 <ryanfave022@gmail.com> 1741362284 +0100	commit: Add job application and sharing buttons to JobDetails component
+1fea444662625a13859f00ec456b693e48be8ce3 f3087e87fefb51c388bf88aa089cdb51cc0d8c23 ryanfavour4 <ryanfave022@gmail.com> 1741362340 +0100	commit: Add job application and sharing buttons to JobDetails component
+f3087e87fefb51c388bf88aa089cdb51cc0d8c23 07a01b267320c78460afc368fcdc894f4905b707 ryanfavour4 <ryanfave022@gmail.com> 1741363090 +0100	commit: Refactor JobDetails component layout and improve job overview section
