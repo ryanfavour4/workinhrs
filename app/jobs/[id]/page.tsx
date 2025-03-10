@@ -8,7 +8,7 @@ import { BsBriefcase, BsWallet2 } from "react-icons/bs";
 import { IoCheckmarkDone, IoShareSocialOutline, IoTimeOutline } from "react-icons/io5";
 import Image from "next/image";
 import { FiMoreVertical } from "react-icons/fi";
-import { JobCard } from "@/app/page";
+import { JobCard } from "@/components/job-cards";
 
 export default function JobDetails() {
     const [sideMenuOpen, setSideMenuOpen] = useState(false);
