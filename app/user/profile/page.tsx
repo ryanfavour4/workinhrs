@@ -14,6 +14,7 @@ export default function UserProfile() {
     const [sideMenuOpen, setSideMenuOpen] = useState(false);
     const sideMenuOpenRef = useRef<HTMLDivElement>(null);
     useClickAway(sideMenuOpenRef, () => setSideMenuOpen(false));
+    const [activeTab, setActiveTab] = useState<"about-me" | "timeline">("about-me");
 
     return (
         <div>
@@ -47,6 +48,7 @@ export default function UserProfile() {
                 </div>
 
                 <div className="relative grid gap-12 px-3 pb-6 lg:grid-cols-12">
+                    {/* SIDE AREA */}
                     <div
                         ref={sideMenuOpenRef}
                         className={`${sideMenuOpen ? "translate-x-0" : "-translate-x-full"} fixed left-0 top-0 z-10 h-full overflow-y-auto rounded-md border border-textcolor/25 bg-secondary p-3 py-8 backdrop-blur md:bg-secondary/75 lg:relative lg:col-span-4 lg:inline-block lg:translate-x-0`}
@@ -105,95 +107,111 @@ export default function UserProfile() {
                                         <h4 className="font-semibold">Nationality</h4>
                                         <p>South Korea</p>
                                     </div>
+
+                                    <div className="">
+                                        <h4 className="font-semibold">Joined On</h4>
+                                        <p>Apr 12 1990</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    {/* MAIN AREA */}
                     <div className="h-full w-full rounded-md md:border md:p-3 lg:col-span-8">
                         <div className="flex flex-wrap items-center gap-4 text-sm">
-                            <button className="flex items-center gap-3 rounded-t-md border-b-2 border-primary bg-secondary/25 px-2.5 py-1.5 active:scale-95">
+                            <button
+                                onClick={() => setActiveTab("about-me")}
+                                className={`flex items-center gap-3 rounded-t-md border-b-2 border-primary px-2.5 py-1.5 active:scale-95 ${activeTab === "about-me" && "bg-secondary/25"}`}
+                            >
                                 <LuUserRound />
                                 <p>About Me</p>
                             </button>
-                            <button className="flex items-center gap-3 rounded-t-md border-b-2 border-primary bg-secondary/25 px-2.5 py-1.5 active:scale-95">
+                            <button
+                                onClick={() => setActiveTab("timeline")}
+                                className={`flex items-center gap-3 rounded-t-md border-b-2 border-primary px-2.5 py-1.5 active:scale-95 ${activeTab === "timeline" && "bg-secondary/25"}`}
+                            >
                                 <MdTimeline />
                                 <p>Timeline</p>
                             </button>
                         </div>
 
-                        <div className="mt-8 flex flex-col gap-6">
-                            {/*  */}
-                            <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
-                                <h4 className="text-base font-semibold">Basic Information</h4>
-                                <div className="grid grid-cols-3 gap-y-6">
-                                    <div className="font-semibold">
-                                        <h4 className="text-textcolor/75">Years of Experience</h4>
-                                        <p>5 Years</p>
-                                    </div>
-                                    <div className="font-semibold">
-                                        <h4 className="text-textcolor/75">Phone</h4>
-                                        <p>+51 902 258 5395</p>
-                                    </div>
-                                    <div className="font-semibold">
-                                        <h4 className="text-textcolor/75">2nd Phone</h4>
-                                        <p>--</p>
-                                    </div>
-                                    <div className="font-semibold">
-                                        <h4 className="text-textcolor/75">Email</h4>
-                                        <p>johnsmilga@gmail.com</p>
-                                    </div>
-                                    <div className="font-semibold">
-                                        <h4 className="text-textcolor/75">Website</h4>
-                                        <p>johnsmilga.netlify.app</p>
-                                    </div>
-                                    <div className="font-semibold">
-                                        <h4 className="text-textcolor/75">Address</h4>
-                                        <p>1904 Old kingly road fast street</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {/*  */}
-                            {/*  */}
-                            <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
-                                <h4 className="text-base font-semibold">Professional Skills</h4>
-                                <div className="flex flex-wrap gap-x-3 gap-y-6">
-                                    <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
-                                        <p>Communication</p>
-                                        <div
-                                            className={`h-3 w-3 rounded-full border-primary bg-success`}
-                                        />
-                                    </div>
-                                    <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
-                                        <p>Communication</p>
-                                        <div
-                                            className={`h-3 w-3 rounded-full border-primary bg-success`}
-                                        />
-                                    </div>
-                                    <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
-                                        <p>Communication</p>
-                                        <div
-                                            className={`h-3 w-3 rounded-full border-primary bg-success`}
-                                        />
-                                    </div>
-                                    <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
-                                        <p>Communication</p>
-                                        <div
-                                            className={`h-3 w-3 rounded-full border-primary bg-success`}
-                                        />
-                                    </div>
-                                    <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
-                                        <p>Communication</p>
-                                        <div
-                                            className={`h-3 w-3 rounded-full border-primary bg-success`}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            {/*  */}
+                        <div className="">
+                            <AboutMeTab />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+                            consequuntur sed saepe molestias dolor nihil dignissimos necessitatibus!
+                            Eos repellat quisquam, iusto perspiciatis nihil autem consequatur quos
+                            esse quod fuga quidem?
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    );
+}
+
+function AboutMeTab() {
+    return (
+        <div>
+            <div className="mt-8 flex flex-col gap-6">
+                {/*  */}
+                <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
+                    <h4 className="text-base font-semibold">Basic Information</h4>
+                    <div className="grid grid-cols-3 gap-y-6">
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Years of Experience</h4>
+                            <p>5 Years</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Phone</h4>
+                            <p>+51 902 258 5395</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">2nd Phone</h4>
+                            <p>--</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Email</h4>
+                            <p>johnsmilga@gmail.com</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Website</h4>
+                            <p>johnsmilga.netlify.app</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Address</h4>
+                            <p>1904 Old kingly road fast street</p>
+                        </div>
+                    </div>
+                </div>
+                {/*  */}
+                {/*  */}
+                <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
+                    <h4 className="text-base font-semibold">Professional Skills</h4>
+                    <div className="flex flex-wrap gap-x-3 gap-y-6">
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                    </div>
+                </div>
+                {/*  */}
             </div>
         </div>
     );
