@@ -55,7 +55,7 @@ export default function UserProfile() {
                             <div className="flex w-full items-center justify-end lg:hidden">
                                 <button
                                     onClick={() => setSideMenuOpen(!sideMenuOpen)}
-                                    className="btn w-fit bg-error/25 p-2 text-lg font-semibold text-error"
+                                    className="btn w-fit border border-light bg-light/25 p-2 text-lg font-semibold text-light"
                                 >
                                     <CgClose />
                                 </button>
@@ -131,22 +131,24 @@ export default function UserProfile() {
                                         <h4 className="text-textcolor/75">Years of Experience</h4>
                                         <p>5 Years</p>
                                     </div>
-                                    <div className="">
-                                        <h4 className="font-semibold text-textcolor/75">Phone</h4>
+                                    <div className="font-semibold">
+                                        <h4 className="text-textcolor/75">Phone</h4>
                                         <p>+51 902 258 5395</p>
                                     </div>
-                                    <div className="">
-                                        <h4 className="font-semibold text-textcolor/75">
-                                            2nd Phone
-                                        </h4>
+                                    <div className="font-semibold">
+                                        <h4 className="text-textcolor/75">2nd Phone</h4>
                                         <p>--</p>
                                     </div>
-                                    <div className="">
-                                        <h4 className="font-semibold text-textcolor/75">Email</h4>
+                                    <div className="font-semibold">
+                                        <h4 className="text-textcolor/75">Email</h4>
                                         <p>johnsmilga@gmail.com</p>
                                     </div>
-                                    <div className="">
-                                        <h4 className="font-semibold text-textcolor/75">Address</h4>
+                                    <div className="font-semibold">
+                                        <h4 className="text-textcolor/75">Website</h4>
+                                        <p>johnsmilga.netlify.app</p>
+                                    </div>
+                                    <div className="font-semibold">
+                                        <h4 className="text-textcolor/75">Address</h4>
                                         <p>1904 Old kingly road fast street</p>
                                     </div>
                                 </div>
