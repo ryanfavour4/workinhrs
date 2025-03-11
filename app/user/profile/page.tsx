@@ -157,7 +157,7 @@ function AboutMeTab() {
                 {/*  */}
                 <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
                     <h4 className="text-base font-semibold">Basic Information</h4>
-                    <div className="grid grid-cols-3 gap-y-6">
+                    <div className="grid grid-cols-1 gap-y-6 md:grid-cols-3">
                         <div className="font-semibold">
                             <h4 className="text-textcolor/75">Years of Experience</h4>
                             <p>5 Years</p>
@@ -172,7 +172,7 @@ function AboutMeTab() {
                         </div>
                         <div className="font-semibold">
                             <h4 className="text-textcolor/75">Email</h4>
-                            <p>johnsmilga@gmail.com</p>
+                            <p className="text-wrap">johnsmilga@gmail.com</p>
                         </div>
                         <div className="font-semibold">
                             <h4 className="text-textcolor/75">Website</h4>
