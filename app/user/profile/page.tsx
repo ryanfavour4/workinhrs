@@ -137,7 +137,9 @@ export default function UserProfile() {
                         </div>
 
                         <div className="">
-                            <AboutMeTab />
+                            {/* use switch case */}
+                            {activeTab === "about-me" && <AboutMeTab />}
+                            {activeTab === "timeline" && <TimelineTab />}
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
                             consequuntur sed saepe molestias dolor nihil dignissimos necessitatibus!
                             Eos repellat quisquam, iusto perspiciatis nihil autem consequatur quos
@@ -172,7 +174,7 @@ function AboutMeTab() {
                         </div>
                         <div className="font-semibold">
                             <h4 className="text-textcolor/75">Email</h4>
-                            <p className="text-wrap">johnsmilga@gmail.com</p>
+                            <p>johnsmilga@gmail.com</p>
                         </div>
                         <div className="font-semibold">
                             <h4 className="text-textcolor/75">Website</h4>
@@ -208,6 +210,135 @@ function AboutMeTab() {
                         <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
                             <p>Communication</p>
                             <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                    </div>
+                </div>
+                {/*  */}
+                {/*  */}
+                <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
+                    <h4 className="text-base font-semibold">Social Links</h4>
+                    <div className="flex grid-cols-1 flex-wrap gap-x-8 gap-y-6 md:grid md:grid-cols-3">
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">LinkedIn</h4>
+                            <p>linkedin.com</p>
+                        </div>
+
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Instagram</h4>
+                            <p>instagram.com</p>
+                        </div>
+
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Twitter (𝕏)</h4>
+                            <p>x.com</p>
+                        </div>
+
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Youtube</h4>
+                            <p>youtube.com</p>
+                        </div>
+
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Portfolio (Other)</h4>
+                            <p>myself-or-github.com</p>
+                        </div>
+                    </div>
+                </div>
+                {/*  */}
+            </div>
+        </div>
+    );
+}
+
+function TimelineTab() {
+    return (
+        <div>
+            <div className="mt-8 flex flex-col gap-6">
+                {/*  */}
+                <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
+                    <h4 className="text-base font-semibold">Basic Information</h4>
+                    <div className="grid grid-cols-1 gap-y-6 md:grid-cols-3">
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Years of Experience</h4>
+                            <p>5 Years</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Phone</h4>
+                            <p>+51 902 258 5395</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">2nd Phone</h4>
+                            <p>--</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Email</h4>
+                            <p>johnsmilga@gmail.com</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Website</h4>
+                            <p>johnsmilga.netlify.app</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Address</h4>
+                            <p>1904 Old kingly road fast street</p>
+                        </div>
+                    </div>
+                </div>
+                {/*  */}
+                {/*  */}
+                <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
+                    <h4 className="text-base font-semibold">Professional Skills</h4>
+                    <div className="flex flex-wrap gap-x-3 gap-y-6">
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                        <div className="flex items-center gap-2 rounded-2xl border border-primary/75 bg-secondary/25 px-2 py-1 text-sm">
+                            <p>Communication</p>
+                            <div className={`h-3 w-3 rounded-full border-primary bg-success`} />
+                        </div>
+                    </div>
+                </div>
+                {/*  */}
+                {/*  */}
+                <div className="flex flex-col gap-4 rounded-md border-y px-2 py-6">
+                    <h4 className="text-base font-semibold">Social Liks</h4>
+                    <div className="grid grid-cols-1 gap-y-6 md:grid-cols-3">
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">LinkedIn</h4>
+                            <p>linkedin.com/</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Phone</h4>
+                            <p>+51 902 258 5395</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">2nd Phone</h4>
+                            <p>--</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Email</h4>
+                            <p>johnsmilga@gmail.com</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Website</h4>
+                            <p>johnsmilga.netlify.app</p>
+                        </div>
+                        <div className="font-semibold">
+                            <h4 className="text-textcolor/75">Address</h4>
+                            <p>1904 Old kingly road fast street</p>
                         </div>
                     </div>
                 </div>

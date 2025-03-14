@@ -26,7 +26,7 @@ export default function TopNavBar() {
                             </Link>
                         </li>
                         <li>
-                            <Link className="hover:font-semibold hover:underline" href={"#"}>
+                            <Link className="hover:font-semibold hover:underline" href={"/"}>
                                 Jobs
                             </Link>
                         </li>
