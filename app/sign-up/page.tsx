@@ -13,11 +13,11 @@ const Signup = () => {
     const [password, setPassword] = useState<IInputState>({ value: "" });
     const [confirmPassword, setConfirmPassword] = useState<IInputState>({ value: "" });
     return (
-        <div className="flex w-full justify-center">
+        <div className="flex md:flex-row flex-col w-full justify-center">
             <div className="order-2 w-1/2">
-                <Image src={bgImage} alt="loginbg" className="h-screen object-cover" />
+                <Image src={bgImage} alt="loginbg" className="md:block hidden h-screen object-cover" />
             </div>
-            <form action="" className="h-screen w-1/2 max-w-md overflow-y-scroll bg-white p-10">
+            <form action="" className="h-screen md:w-1/2 md:max-w-md w-full overflow-y-scroll bg-white p-10">
                 <div className="flex flex-col gap-3">
                     <Image
                         width={70}
@@ -27,7 +27,7 @@ const Signup = () => {
                         className="flex flex-col items-center justify-center"
                     />
                     <div className="flex flex-col gap-1 pb-2">
-                        <h1 className="text-3xl font-bold text-primary">Get Started</h1>
+                        <h1 className="text-3xl font-bold text-primary">Create an account</h1>
                         <p>Get latest updates on job openings</p>
                     </div>
                     <div className="flex flex-col gap-2">
