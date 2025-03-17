@@ -4,7 +4,7 @@ import logo from "@/public/image/logo.png";
 import bgImage from "@/public/image/people-business-meeting-high-angle.jpg";
 import googleIcon from "@/public/svg/icons8-google.svg";
 import Image from "next/image";
-import  {  IInputState } from "@/components/input/useInput";
+import { IInputState } from "@/components/input/useInput";
 import Input from "@/components/input";
 import Link from "next/link";
 const Login = () => {
@@ -13,11 +13,11 @@ const Login = () => {
 
     return (
         <div className="flex w-full justify-center">
-            <div className="order-2  w-1/2">
+            <div className="order-2 w-1/2">
                 <Image src={bgImage} alt="loginbg" className="h-screen object-cover" />
             </div>
-            <form action="" className="w-1/2 max-w-md h-screen bg-white p-10">
-                <div className="flex flex-col gap-3 ">
+            <form action="" className="h-screen w-1/2 max-w-md bg-white p-10">
+                <div className="flex flex-col gap-3">
                     <Image
                         width={70}
                         height={70}
@@ -73,12 +73,12 @@ const Login = () => {
                         <p className="flex-nowrap text-nowrap text-xs"> Or</p>
                         <hr className="w-full" />
                     </div>
-                    <div className="mt-2 flex items-center justify-center gap-1 rounded-md border border-gray-300 p-2 cursor-pointer">
+                    <div className="mt-2 flex cursor-pointer items-center justify-center gap-1 rounded-md border border-gray-300 p-2">
                         <Image src={googleIcon} alt="Google Icon" width={20} height={20} />
                         <p>Continue with Google</p>
                     </div>
                     <div className="flex items-center justify-center text-sm">
-                        <p className="font-bold text-black">Don't have an account?</p>
+                        <p className="font-bold text-black">Don&apos;t have an account?</p>
                         <Link className="pl-1 font-bold text-primary underline" href="/sign-up">
                             Register here
                         </Link>
