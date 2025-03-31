@@ -2,21 +2,31 @@
 import React, { useState } from "react";
 import logo from "@/public/image/logo.png";
 import bgImage from "@/public/image/people-business-meeting-high-angle.jpg";
+import Input from "@/components/input";
 import googleIcon from "@/public/svg/icons8-google.svg";
 import Image from "next/image";
-import { IInputState } from "@/components/input/useInput";
-import Input from "@/components/input";
 import Link from "next/link";
-const Login = () => {
+import { IInputState } from "@/components/input/useInput";
+
+const Signup = () => {
     const [email, setEmail] = useState<IInputState>({ value: "" });
+    const [name, setName] = useState<IInputState>({ value: "" });
     const [password, setPassword] = useState<IInputState>({ value: "" });
+    const [confirmPassword, setConfirmPassword] = useState<IInputState>({ value: "" });
 
     return (
-        <div className="flex md:flex-row flex-col w-full justify-center">
+        <div className="flex w-full flex-col justify-center md:flex-row">
             <div className="order-2 w-1/2">
-                <Image src={bgImage} alt="loginbg" className="md:block hidden h-screen object-cover" />
+                <Image
+                    src={bgImage}
+                    alt="loginbg"
+                    className="hidden h-screen object-cover md:block"
+                />
             </div>
-            <form action="" className="h-screen md:w-1/2 md:max-w-md w-full  bg-white p-10">
+            <form
+                action=""
+                className="h-screen w-full overflow-y-scroll bg-white p-10 md:w-1/2 md:max-w-md"
+            >
                 <div className="flex flex-col gap-3">
                     <Image
                         width={70}
@@ -26,14 +36,28 @@ const Login = () => {
                         className="flex flex-col items-center justify-center"
                     />
                     <div className="flex flex-col gap-1 pb-2">
-                        <h1 className="text-3xl font-bold text-primary">Welcome back!</h1>
+                        <h1 className="text-3xl font-bold text-primary">Create an account</h1>
                         <p>Get latest updates on job openings</p>
                     </div>
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="username" className="font-semibold">
+                            Name
+                        </label>
 
+                        <Input
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                            state={name}
+                            setState={setName}
+                        />
+                    </div>
                     <div className="flex flex-col gap-2">
                         <label htmlFor="username" className="font-semibold">
                             Email Address
                         </label>
+
                         <Input
                             type="email"
                             name="email"
@@ -56,17 +80,26 @@ const Login = () => {
                             setState={setPassword}
                         />
                     </div>
-                    <div className="flex items-center justify-between pt-3 text-xs">
-                        <div className="flex items-center justify-center gap-1">
-                            <input type="checkbox" />
-                            <p>Remember me</p>
-                        </div>
-
-                        <a href="#">Forgot Password?</a>
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="username" className="font-semibold">
+                            Confirm Password
+                        </label>
+                        <Input
+                            type="password"
+                            name="password"
+                            placeholder="Must match password"
+                            required
+                            state={confirmPassword}
+                            setState={setConfirmPassword}
+                        />
+                    </div>
+                    <div className="justify-left flex items-center gap-1">
+                        <input type="checkbox" />
+                        <p>Remember me</p>
                     </div>
 
                     <button type="submit" className="btn-primary mt-3">
-                        Login
+                        Sign up
                     </button>
                     <div className="flex items-center justify-center gap-1">
                         <hr className="w-full" />
@@ -78,9 +111,9 @@ const Login = () => {
                         <p>Continue with Google</p>
                     </div>
                     <div className="flex items-center justify-center text-sm">
-                        <p className="font-bold text-black">Don&apos;t have an account?</p>
-                        <Link className="pl-1 font-bold text-primary underline" href="/sign-up">
-                            Register here
+                        <p className="font-bold text-black">Already have an account?</p>
+                        <Link href="/auth/login" className="pl-1 font-bold text-primary underline">
+                            Login here
                         </Link>
                     </div>
                 </div>
@@ -89,4 +122,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
